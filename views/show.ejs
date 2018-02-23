@@ -10,4 +10,13 @@
         <strong><%= comment.author %></strong> - <%= comment.text %>
     </p>
 <% }) %>
+
+<form action="/campgrounds/<%= campground._id%>" method="POST">
+    <div>
+		<input type="text" name="user" placeholder="guest">
+		<input type="text" name="comment" placeholder="comment goes here">
+		<input type="submit" value="Post as Guest" class="btn btn-primary">
+    </div>
+ </form>
+
 <% include partials/footer %>
